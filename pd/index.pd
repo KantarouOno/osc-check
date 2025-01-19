@@ -1,0 +1,10 @@
+#N canvas 100 100 500 300 10;
+#X floatatom 121 34 0 0 0 0 - - - 0;
+#X obj 50 175 netsend -u;
+#X msg 309 44 connect 0.0.0.0 8000;
+#X msg 66 97 send /ramp1 \$1;
+#X msg 233 128 disconnect;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
