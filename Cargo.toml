@@ -4,6 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rosc = "0.6"
-eframe = "0.22"
-tokio = { version = "1.31", features = ["full"] }
+eframe = { version = "0.22", features = ["default"] } # eframeはUI用
+egui_extras = "0.22"
+
+midir = { version = "0.9", features = ["default"] }   # MIDIインターフェース用
+
+# オプションで追加した方が良い依存関係例:
+# serde: データのシリアライズ/デシリアライズ
+serde = { version = "1.0", features = ["derive"] }
