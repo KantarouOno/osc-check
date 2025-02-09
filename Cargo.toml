@@ -4,11 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-eframe = { version = "0.22", features = ["default"] } # eframeはUI用
-egui_extras = "0.22"
-
 midir = { version = "0.9", features = ["default"] }   # MIDIインターフェース用
-
 # オプションで追加した方が良い依存関係例:
 # serde: データのシリアライズ/デシリアライズ
 serde = { version = "1.0", features = ["derive"] }
+
+image = "0.25.5"
+opencv = { version = "0.88.8", default-features = false, features = [
+    "clang-runtime",
+    "highgui",
+    "videoio",
+    "calib3d",
+    "imgcodecs"
+] }
